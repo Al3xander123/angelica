@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<style>
+.mi_pagina{
+border: 2px solid blue;
+display: flex;
+float: right;
+}
+.ss{
+margin: 10px;
+display: grid;
+place-items: center;
+}
+.caja{
+	width:100px;
+	height:100px;
+	border:1px solid black;
+	}
+body{
+display: grid;
+place-items: center;
+}
+</style>
+</head>
+<body>
+
+<p>Ang&eacute;lica, tienes que ver los archivos, y seleccionar una u otra url para que veas<br>
+c&oacute;mo es que tiene que funcionar, el extrae de una direccion de internet<br>
+en este caso las otras paginas estan en el mismo dominio ( osea en la misma carpeta )<br>
+lo que me falta aprender es poder abrir otra pagina de internet y extraer esos datos<br>
+</p>
+<p>
+En la carpeta index estal las url's que puedes elegir</p>
+
+<div class="mi_pagina">
+<div class="elegir ss">Elige una p&aacute;gina</div>
+<div class="seleccion ss">
+<select id="mi_select">
+<option value="mis_divs.html">P&aacute;gina 1</option>
+<option value="mis_divs_2.html">P&aacute;gina 2</option>
+</select>
+</div>
+<div>
+<button id="mi_boton"class="ss">Ver p&aacute;gina</button>
+</div>
+</div>
+
+<div id="midiv"></div>
+<br>
+<div id="midiv2"></div>
+<br>
+<div id="midiv3"></div>
+<br>
+<ol id="mi_ul"><!--li class="mi_li"--></li></ol>
+
+
+<script type="text/javascript" src="google-cdn.js"></script>
+<!--script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script-->
+<script>
+
+var url ="";
+
+let miboton = document.getElementById("mi_boton");
+miboton.addEventListener("click",miFuncion);
+
+function miFuncion(){
+	url = document.getElementById("mi_select").value;
+
+console.log(url);
+/**************************/
+var midiv  = document.getElementById("midiv");
+var midiv2 = document.getElementById("midiv2");
+var misdivs = document.getElementById("midiv3");
+var miul = document.getElementById("mi_ul");
+//var mili = document.getElementsByClassName("mi_li");
+//	mili.clear();
+var mibr = $("<br>");
+dato = "";
+var datos = dato.innerHTML = "<br>";
+var precio3 = 0
+var callback = function(data,status){
+		midiv.innerHTML = data;
+//		alert("Data: " + data + "\nStatus: "+ status);
+
+let precio1 = document.getElementsByClassName("precio");
+let precio2 = precio1.length;
+
+for(i=0;i<precio2;i++){
+
+
+const nodo = document.createElement("li")
+const agua ="Precio: " + precio1[i].innerHTML;
+const texto = document.createTextNode(agua);
+nodo.appendChild(texto);
+
+let miul = document.getElementById("mi_ul");
+miul.appendChild(nodo);
+
+}
+}
+
+$.get(url,callback)
+/**************************/
+}
+
+
+
+/*
+//var url = "mis_divs.html"
+//var url = "mis_divs_2.html"
+var midiv  = document.getElementById("midiv");
+var midiv2 = document.getElementById("midiv2");
+var misdivs = document.getElementById("midiv3");
+var miul = document.getElementById("mi_ul");
+var mibr = $("<br>");
+dato = "";
+var datos = dato.innerHTML = "<br>";
+var precio3 = 0
+var callback = function(data,status){
+		midiv.innerHTML = data;
+//		alert("Data: " + data + "\nStatus: "+ status);
+
+let precio1 = document.getElementsByClassName("precio");
+let precio2 = precio1.length;
+
+for(i=0;i<precio2;i++){
+
+
+const nodo = document.createElement("li")
+const agua ="Precio: " + precio1[i].innerHTML;
+const texto = document.createTextNode(agua);
+nodo.appendChild(texto);
+
+let miul = document.getElementById("mi_ul");
+miul.appendChild(nodo);
+
+}
+}
+
+$.get(url,callback)
+*/
+</script>
+
+</body>
+</html>
