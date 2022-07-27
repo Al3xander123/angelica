@@ -1,0 +1,8 @@
+[
+    {"Vuelo":"Econonica","Nombre":"Alberto","Apellido":"Marquez","Edad":"36","Cedula":"16.643.571","Precio del Vuelo":"5.000.000","Numero del Vuelo":"123456"},
+    {"Vuelo":"Turista","Nombre":"Reina","Apellido":"Rodriguez","Edad":"45","Cedula":"7.313.543","Precio del Vuelo":"10.000.000","Numero del Vuelo":"123457"},
+    {"Vuelo":"Ejecutiva","Nombre":"Efrain","Apellido":"Parra","Edad":"50","Cedula":"3.859.908","Precio del Vuelo":"100.000.000","Numero del Vuelo":"123458"},
+    {"Vuelo":"VIP","Nombre":"Ivett","Apellido":"Castellano","Edad":"38","Cedula":"11.948.898","Precio del Vuelo":"200.000.000","Numero del Vuelo":"123459"},
+    {"Vuelo":"Espacial","Nombre":"Yuly","Apellido":"Sciortino","Edad":"37","Cedula":"13.584.494","Precio del Vuelo":"500.000.000","Numero del Vuelo":"123460"},
+    {"Vuelo":"Warp","Nombre":"Maria","Apellido":"Lopez","Edad":"36","Cedula":"19.640.248","Precio del Vuelo":"2.000.000.000","Numero del Vuelo":"123461"}
+]

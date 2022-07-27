@@ -1,63 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head><title></title>
-<style>
-.caja{
-	width:100px;
-	height:100px;
-	border:1px solid black;
-	}
-</style>
-</head>
+<head><title></title></head>
 <body>
-<!--
-<div class="caja">
-<div class="nombre">Admiral</div>
-<div class="imagen"><img src="" title="Foto" alt="Foto"></div>
-<div class="precio">5.000</div>
-</div>
+
+<table border = "1">
+<tr><td>
+<select id = "my_url">
+<option value = "list.json" selected> Mi Lista</option>
+<option value = "https://jsonplaceholder.typicode.com/posts"> Coderhouse </option>
+<option value = "http://hp-api.herokuapp.com/api/characters"> Harry Potter </option>
+</select>
+
+</td><td>
+<button type = "button" id = "my_button" autofocus> Mostrar </button>
+</td></tr></table>
 <br>
-<div class="caja">
-<div class="nombre">Admiral</div>
-<div class="imagen"><img src="" title="Foto" alt="Foto"></div>
-<div class="precio">10.000</div>
-</div>
-<br>
-<div class="caja">
-<div class="nombre">Admiral</div>
-<div class="imagen"><img src="" title="Foto" alt="Foto"></div>
-<div class="precio">15.000</div>
-</div>
-<br>
--->
-<div id="midiv"></div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
-<script>
-
-var url = "mis_divs.html"
-//var url = "https://www.w3schools.com/jsref/met_node_appendchild.asp"
-var callback = function(data,status){alert("Data: " + data + "\nStatus: "+ status);}
-
-$.get(url,callback)
+<div id = "my_id_div"></div>
 
 
-</script>
-
-
-
-<script>
-var precios = document.getElementsByClassName("precio");
-var tamanno  = precios.length;
-	
-var midiv = document.getElementById("midiv");
-	for(i=0;i<tamanno;i++){
-	midiv.innerHTML="<div>Precio="+precios[i].innerHTML+"</	div><br>";
-	}
-</script>
-
-
-
-
+<script src = "google-cdn.js" ></script>
+<script src = "script.js" ></script>
 </body>
 </html>
